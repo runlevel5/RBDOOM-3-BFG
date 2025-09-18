@@ -452,7 +452,7 @@ Recommended in this case is `cmake-vs2022-win64-no-ffmpeg.bat`
 	
 	On Fedora
 		
-		> sudo dnf install cmake clang ispc SDL2-devel openal-soft-devel compat-ffmpeg4-devel ncurses-devel vulkan-devel
+		> sudo dnf install cmake clang ispc SDL2-devel openal-soft-devel ffmpeg-free-devel ncurses-devel vulkan-devel
 	
 	On ArchLinux 
 	
@@ -464,26 +464,26 @@ Recommended in this case is `cmake-vs2022-win64-no-ffmpeg.bat`
 
 	You don't need FFmpeg to be installed. You can turn it off by adding -DFFMPEG=OFF and -DBINKDEC=ON to the CMake options. It is enabled by default because the bundled libbinkdec is slow during development if compiled for Debug mode.
 
-3. Checkout the source code into a new `DoomCode` directory
+4. Checkout the source code into a new `DoomCode` directory
 
 		> git clone --recursive https://github.com/RobertBeckebans/RBDOOM-3-BFG.git DoomCode
 
-4. Generate the Makefiles using CMake:
+5. Generate the Makefiles using CMake:
 
 		> cd DoomCode/neo/
 		> ./cmake-linux-release.sh
 	
-5. Compile the engine and tools in `DoomCode/build/` with
+6. Compile the engine and tools in `DoomCode/build/` with
 
 		> make -j<number of your cores>
 
-6. Copy the base folder of your `Steam/steamapps/common/DOOM 3 BFG Edition/base/` over to `DoomCode/base/` See also [Installation](#installation)
+7. Copy the base folder of your `Steam/steamapps/common/DOOM 3 BFG Edition/base/` over to `DoomCode/base/` See also [Installation](#installation)
 
-7. Download the 7z from https://github.com/RobertBeckebans/RBDOOM-3-BFG/releases/tag/v1.6.0 and unpack the base/*.pk4 files into your `DoomCode/base/` folder
+8. Download the 7z from https://github.com/RobertBeckebans/RBDOOM-3-BFG/releases/tag/v1.6.0 and unpack the base/*.pk4 files into your `DoomCode/base/` folder
 
-8. Copy `DoomCode/build/RBDoom3BFG` to `DoomCode/`
+9. Copy `DoomCode/build/RBDoom3BFG` to `DoomCode/`
 
-9. Start the game in `DoomCode/`
+10. Start the game in `DoomCode/`
 
 ---
 # Compiling on macOS <a name="compile_macos"></a>
